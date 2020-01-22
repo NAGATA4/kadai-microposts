@@ -8,6 +8,9 @@
                 <img class="rounded img-fluid" src="<%= gravatar_url(@user, { size: 500 }) %> alt=">
             </div>
         </div>
+        
+        <%= link_to 'Favorites', likes_user_path, class: 'btn btn-primary btn-block mb-2' %>
+        
         <%= render 'relationships/follow_button', user: @user %>
     </aside>
     <div class="col-sm-8">

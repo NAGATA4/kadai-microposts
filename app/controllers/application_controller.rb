@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     
     include SessionsHelper
+
     
     private
     
@@ -16,4 +17,10 @@ class ApplicationController < ActionController::Base
         @count_followers = user.followers.count
     end
     
+    def counts(micropost)
+        # カウント機能
+        @count_microposts = @user.microposts.count
+        @count_likes = @user.likes.count
+        @count_favors = @user.favors.count
+    end
 end
